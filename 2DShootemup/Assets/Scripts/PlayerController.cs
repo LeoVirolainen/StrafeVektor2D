@@ -22,6 +22,14 @@ public class PlayerController : MonoBehaviour {
 	public GameObject playerBullet;
 	public GameObject rapidFirer;
 
+    //sounds
+    public AudioSource audioSource;
+    public AudioClip collideSound;
+    public AudioClip HPSound;
+    public AudioClip starPowerSound;
+    public AudioClip rapidFireSound;
+    public AudioClip takeHitSound;
+
 	void Update() {
 		transform.Translate(-Vector3.left * Time.deltaTime * moveSpeed);
 		if (!Input.GetKey(KeyCode.Mouse0) && inGround == false) {
@@ -77,6 +85,7 @@ public class PlayerController : MonoBehaviour {
 		int rand = Random.Range(3, 0);
 		switch (rand) {
 			case 1:
+                audioSource.PlayOneShot(HPSound, 1f);
 				Debug.Log("HP++");
 				if (hp < 1) {
 					hp += 0.333f;
@@ -84,13 +93,15 @@ public class PlayerController : MonoBehaviour {
 				}
 				break;
 			case 2:
-				Debug.Log("STAR_POWER");
+                audioSource.PlayOneShot(starPowerSound, 0.65f);
+                Debug.Log("STAR_POWER");
 				starPower = true;
 				gameObject.GetComponent<Renderer>().material.color = Color.red;
 				SPCounter = 0;
 				break;
 			case 3:
-				Debug.Log("RAPID FIRE");
+                audioSource.PlayOneShot(rapidFireSound, 3f);
+                Debug.Log("RAPID FIRE");
 				rapidFire = true;
 				rapidFirer.SetActive(true);
 				RFCounter = 0;
@@ -106,10 +117,12 @@ public class PlayerController : MonoBehaviour {
 			inCeiling = true;
 		}
 		if (collision.gameObject.CompareTag("Enemy")) {
+            audioSource.PlayOneShot(takeHitSound);
 			Destroy(collision.gameObject);
 			if (!starPower) {
-				TakeDamage();
-			}
+                TakeDamage();
+                audioSource.PlayOneShot(collideSound, 0.9f);
+            }
 		}
 		if (collision.gameObject.CompareTag("PowerUp")) {
 			Destroy(collision.gameObject);

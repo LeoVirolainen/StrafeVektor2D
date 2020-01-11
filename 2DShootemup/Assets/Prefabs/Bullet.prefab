@@ -125,6 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  audioSource: {fileID: 0}
+  takeHitSound: {fileID: 8300000, guid: ef6c05cb5a86c42c7aac4c9969c0afa9, type: 3}
+  shootSound: {fileID: 8300000, guid: cf33308d8d9d041d9918df58213706c0, type: 3}
 --- !u!108 &425224074422015338
 Light:
   m_ObjectHideFlags: 0
