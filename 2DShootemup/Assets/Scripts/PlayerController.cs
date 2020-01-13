@@ -85,7 +85,7 @@ public class PlayerController : MonoBehaviour {
 		int rand = Random.Range(3, 0);
 		switch (rand) {
 			case 1:
-                audioSource.PlayOneShot(HPSound, 1f);
+                audioSource.PlayOneShot(HPSound, 0.4f);
 				Debug.Log("HP++");
 				if (hp < 1) {
 					hp += 0.333f;
@@ -93,14 +93,14 @@ public class PlayerController : MonoBehaviour {
 				}
 				break;
 			case 2:
-                audioSource.PlayOneShot(starPowerSound, 0.65f);
+                audioSource.PlayOneShot(starPowerSound, 0.3f);
                 Debug.Log("STAR_POWER");
 				starPower = true;
 				gameObject.GetComponent<Renderer>().material.color = Color.red;
 				SPCounter = 0;
 				break;
 			case 3:
-                audioSource.PlayOneShot(rapidFireSound, 3f);
+                audioSource.PlayOneShot(rapidFireSound, 2.7f);
                 Debug.Log("RAPID FIRE");
 				rapidFire = true;
 				rapidFirer.SetActive(true);
