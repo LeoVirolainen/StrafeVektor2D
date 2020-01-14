@@ -51,7 +51,9 @@ public class PlayerController : MonoBehaviour {
         
         if (transform.position.y <= -4.0f) {
 			inGround = true;
-		}
+		} else {
+            inGround = false;
+        }
 		if (transform.position.y >= 9.0f) {
 			inCeiling = true;
 		}
