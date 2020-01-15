@@ -26,7 +26,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 444}
   m_MaxSize: {x: 22012, y: 10022}
   vertical: 0
-  controlID: 16973
+  controlID: 179
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -132,7 +132,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 16952
+  controlID: 54
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -195,9 +195,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.171097, y: -2.898469, z: 2.003006}
+    m_Target: {x: -18.822853, y: -5.126321, z: 2.573926}
     speed: 2
-    m_Value: {x: -14.171097, y: -2.898469, z: 2.003006}
+    m_Value: {x: -18.822853, y: -5.126321, z: 2.573926}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -226,13 +226,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.2199085, y: 0.07074068, z: -0.016042983, w: -0.972863}
+    m_Target: {x: -0.2436052, y: -0.18573007, z: 0.04753408, w: -0.9507818}
     speed: 2
-    m_Value: {x: -0.21989931, y: 0.07073772, z: -0.016042313, w: -0.9728223}
+    m_Value: {x: -0.24359488, y: -0.18572222, z: 0.047532067, w: -0.9507416}
   m_Size:
-    m_Target: 41.966393
+    m_Target: 5.4532895
     speed: 2
-    m_Value: 41.966393
+    m_Value: 5.4532895
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -308,7 +308,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 344}
   m_MaxSize: {x: 4004, y: 8044}
   vertical: 1
-  controlID: 16974
+  controlID: 99
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,7 +366,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 1aecffff1cecffff
+      m_ExpandedIDs: 78fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -507,20 +507,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Projects\StrafeVektor2D\2DShootemup
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a43c0000
-    m_LastClickedID: 15524
-    m_ExpandedIDs: 00000000aa3a0000683c00000659000000ca9a3b
+    m_SelectedIDs: ae2c0000
+    m_LastClickedID: 11438
+    m_ExpandedIDs: 00000000ae2c00001e2f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -548,7 +548,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa3a000000ca9a3b
+    m_ExpandedIDs: 00000000ae2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,8 +573,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 563d0000
-    m_LastClickedInstanceID: 15702
+    m_SelectedInstanceIDs: 2aecffff
+    m_LastClickedInstanceID: -5078
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
@@ -592,7 +592,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 14}
+      m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
