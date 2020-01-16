@@ -7,7 +7,9 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
 	public float upSpeed;
+    public float accMultip;
 	public float hp = 3;
+    public bool movingUp;
 	public bool inGround;
 	public bool inCeiling;
 	public bool starPower;
@@ -31,16 +33,27 @@ public class PlayerController : MonoBehaviour {
     public AudioClip takeHitSound;
 
 	void Update() {
-		transform.Translate(-Vector3.left * Time.deltaTime * moveSpeed);
-		if (!Input.GetKey(KeyCode.Mouse0) && inGround == false) {
-			transform.Translate(-Vector3.up * Time.deltaTime * upSpeed);
+		transform.Translate(-Vector3.left * Time.deltaTime * moveSpeed);    //Keeps player moving to the right
+		if (!Input.GetKey(KeyCode.Mouse0) && inGround == false) {           //Go down when click released
+            movingUp = false;
+            transform.Translate(-Vector3.up * Time.deltaTime * upSpeed);
 		}
-		if (Input.GetKey(KeyCode.Mouse0) && inCeiling == false) {
-			transform.Translate(Vector3.up * Time.deltaTime * upSpeed);
-		}
-		if (transform.position.y <= -4.0f) {
+		if (Input.GetKey(KeyCode.Mouse0) && inCeiling == false) {           //Go up when holding click          
+            movingUp = true;
+            transform.Translate(Vector3.up * Time.deltaTime * upSpeed);
+		}        
+        if (Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse0)) {
+            upSpeed = 0;            
+        }       
+        if (upSpeed <= 15f) {
+            upSpeed += Time.deltaTime * accMultip;                          //Acceleration
+        } 
+        
+        if (transform.position.y <= -4.0f) {
 			inGround = true;
-		}
+		} else {
+            inGround = false;
+        }
 		if (transform.position.y >= 9.0f) {
 			inCeiling = true;
 		}
