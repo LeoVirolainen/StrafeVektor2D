@@ -7,9 +7,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float moveSpeed;
 	public float upSpeed;
-    public float accMultip;
 	public float hp = 3;
-    public bool movingUp;
 	public bool inGround;
 	public bool inCeiling;
 	public bool starPower;
@@ -23,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 	public float maxCounter = 2;
 	public GameObject playerBullet;
 	public GameObject rapidFirer;
+    private Rigidbody rb;
 
     //sounds
     public AudioSource audioSource;
@@ -32,22 +31,18 @@ public class PlayerController : MonoBehaviour {
     public AudioClip rapidFireSound;
     public AudioClip takeHitSound;
 
-	void Update() {
-		transform.Translate(-Vector3.left * Time.deltaTime * moveSpeed);    //Keeps player moving to the right
-		if (!Input.GetKey(KeyCode.Mouse0) && inGround == false) {           //Go down when click released
-            movingUp = false;
-            transform.Translate(-Vector3.up * Time.deltaTime * upSpeed);
-		}
-		if (Input.GetKey(KeyCode.Mouse0) && inCeiling == false) {           //Go up when holding click          
-            movingUp = true;
-            transform.Translate(Vector3.up * Time.deltaTime * upSpeed);
-		}        
-        if (Input.GetKeyUp(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Mouse0)) {
-            upSpeed = 0;            
-        }       
-        if (upSpeed <= 15f) {
-            upSpeed += Time.deltaTime * accMultip;                          //Acceleration
-        } 
+    private void Start() {
+        rb = transform.GetComponent<Rigidbody>();
+    }
+
+    void Update() {
+        transform.Translate(-Vector3.left * Time.deltaTime * moveSpeed);    //Keeps player moving to the right
+        if (Input.GetKey(KeyCode.Mouse0) && inCeiling == false) {           //Go up when holding click    
+            rb.AddForce(Vector3.up * upSpeed);
+        }
+        if (!Input.GetKey(KeyCode.Mouse0) && inGround == false) {           //Go down when click released
+            rb.AddForce(Vector3.down * upSpeed);
+        }
         
         if (transform.position.y <= -4.0f) {
 			inGround = true;
@@ -56,7 +51,9 @@ public class PlayerController : MonoBehaviour {
         }
 		if (transform.position.y >= 9.0f) {
 			inCeiling = true;
-		}
+		} else {
+            inCeiling = false;
+        }
 		if (!rapidFire) {
 			if (counter > maxCounter) {
 				GameObject bullet = Instantiate(playerBullet, transform.position, Quaternion.identity) as GameObject;
@@ -123,12 +120,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision collision) {
-		if (collision.gameObject.CompareTag("Ground")) {
-			inGround = true;
-		}
-		if (collision.gameObject.CompareTag("Ceiling")) {
-			inCeiling = true;
-		}
 		if (collision.gameObject.CompareTag("Enemy")) {
             audioSource.PlayOneShot(takeHitSound);
 			Destroy(collision.gameObject);
@@ -140,14 +131,6 @@ public class PlayerController : MonoBehaviour {
 		if (collision.gameObject.CompareTag("PowerUp")) {
 			Destroy(collision.gameObject);
 			GetPowerUp();
-		}
-	}
-	private void OnCollisionExit(Collision collision) {
-		if (collision.gameObject.CompareTag("Ground")) {
-			inGround = false;
-		}
-		if (collision.gameObject.CompareTag("Ceiling")) {
-			inCeiling = false;
 		}
 	}
 
