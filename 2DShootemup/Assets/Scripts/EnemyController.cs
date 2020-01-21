@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour {
 	public bool movingUp;
 	public GameObject enemyBullet;
 
+    public Animator enemyStayShootA;
+
 	void Start() {
 
 	}
@@ -21,10 +23,12 @@ public class EnemyController : MonoBehaviour {
 	void Update() {
 		if (shooting) {
 			if (counter > maxCounter) {
+                enemyStayShootA.Play("fire");
 				GameObject bullet = Instantiate(enemyBullet, transform.position, Quaternion.identity) as GameObject;
 				bullet.transform.Rotate(new Vector3(0, 0, 90));
 				Destroy(bullet, 5);
-				counter = 0;
+
+                counter = 0;
 			} else {
 				counter += Time.deltaTime;
 			}

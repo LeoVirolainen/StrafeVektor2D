@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 380161111005237352}
   - component: {fileID: 7979833339276903884}
   - component: {fileID: 4199482786385132891}
+  - component: {fileID: 6162097745531939123}
   m_Layer: 0
   m_Name: EnemyMove
   m_TagString: Enemy
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733089558782854146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014075279, y: 1.6896877, z: -1.1686869}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1183272720324406564}
@@ -68,6 +69,25 @@ MonoBehaviour:
   movingUp: 0
   enemyBullet: {fileID: 4574309056104716759, guid: abd1d70bfeba2487d9a8f29715f78b76,
     type: 3}
+--- !u!95 &6162097745531939123
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 733089558782854146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32ba80d68965f3e4687d92f3613beb0c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6129786720473908798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -155,6 +175,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 10121c46709cbe5459dc3c9fce444f41, type: 2}
+    - target: {fileID: 8460581656222718749, guid: 4a3fa0eb85ff99041b87b949b3d4d5aa,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
     - target: {fileID: -981998649904569321, guid: 4a3fa0eb85ff99041b87b949b3d4d5aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -170,11 +195,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dabe1ccf7690fc348af7bf19dfff88c8, type: 2}
-    - target: {fileID: 8460581656222718749, guid: 4a3fa0eb85ff99041b87b949b3d4d5aa,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a3fa0eb85ff99041b87b949b3d4d5aa, type: 3}
 --- !u!4 &1183272720324406564 stripped
