@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2244966220219252794}
   - component: {fileID: 8421505089409275294}
   - component: {fileID: 2316729540276350217}
+  - component: {fileID: 3839827139430793331}
   m_Layer: 0
   m_Name: EnemyMoveShoot
   m_TagString: Enemy
@@ -68,6 +69,26 @@ MonoBehaviour:
   movingUp: 0
   enemyBullet: {fileID: 4574309056104716759, guid: abd1d70bfeba2487d9a8f29715f78b76,
     type: 3}
+  enemyStayShootAnimator: {fileID: 0}
+--- !u!95 &3839827139430793331
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174691250482566224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf083926fb78ee74f9b30cebeb970b71, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &283109155588985897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,11 +101,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyMoveShoot
       objectReference: {fileID: 0}
-    - target: {fileID: -8277064854309609534, guid: 001d758a92974c34795c50f472d07a86,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
     - target: {fileID: -4216859302048453862, guid: 001d758a92974c34795c50f472d07a86,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -160,7 +176,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dabe1ccf7690fc348af7bf19dfff88c8, type: 2}
-    - target: {fileID: 5448579309193325848, guid: 001d758a92974c34795c50f472d07a86,
+    - target: {fileID: -8277064854309609534, guid: 001d758a92974c34795c50f472d07a86,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -170,17 +186,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 10121c46709cbe5459dc3c9fce444f41, type: 2}
+    - target: {fileID: 5448579309193325848, guid: 001d758a92974c34795c50f472d07a86,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
     - target: {fileID: 6993051982550269841, guid: 001d758a92974c34795c50f472d07a86,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 10121c46709cbe5459dc3c9fce444f41, type: 2}
-    - target: {fileID: 8412516483601674962, guid: 001d758a92974c34795c50f472d07a86,
+    - target: {fileID: 8623602228590123651, guid: 001d758a92974c34795c50f472d07a86,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
-    - target: {fileID: 8623602228590123651, guid: 001d758a92974c34795c50f472d07a86,
+    - target: {fileID: 8412516483601674962, guid: 001d758a92974c34795c50f472d07a86,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

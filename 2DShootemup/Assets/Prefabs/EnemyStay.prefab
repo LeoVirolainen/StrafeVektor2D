@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8176521169126686227}
   - component: {fileID: 687377810066569218}
   - component: {fileID: 6733885320576745621}
+  - component: {fileID: 4828974452623877561}
   m_Layer: 0
   m_Name: EnemyStay
   m_TagString: Enemy
@@ -115,3 +116,23 @@ MonoBehaviour:
   movingUp: 0
   enemyBullet: {fileID: 4574309056104716759, guid: abd1d70bfeba2487d9a8f29715f78b76,
     type: 3}
+  enemyStayShootAnimator: {fileID: 0}
+--- !u!95 &4828974452623877561
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7861151125920512460}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3b2c5a099eb7c748af2021ff54568ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

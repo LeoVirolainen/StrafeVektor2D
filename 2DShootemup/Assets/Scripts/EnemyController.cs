@@ -14,16 +14,16 @@ public class EnemyController : MonoBehaviour {
 	public bool movingUp;
 	public GameObject enemyBullet;
 
-    public Animator enemyStayShootA;
+    public Animator enemyStayShootAnimator;
 
 	void Start() {
-
+        enemyStayShootAnimator = gameObject.GetComponent<Animator>();
 	}
 
 	void Update() {
 		if (shooting) {
 			if (counter > maxCounter) {
-                enemyStayShootA.Play("fire");
+                enemyStayShootAnimator.Play("fire");
 				GameObject bullet = Instantiate(enemyBullet, transform.position, Quaternion.identity) as GameObject;
 				bullet.transform.Rotate(new Vector3(0, 0, 90));
 				Destroy(bullet, 5);
