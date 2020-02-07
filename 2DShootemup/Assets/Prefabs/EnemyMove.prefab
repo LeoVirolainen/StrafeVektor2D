@@ -69,6 +69,7 @@ MonoBehaviour:
   movingUp: 0
   enemyBullet: {fileID: 4574309056104716759, guid: abd1d70bfeba2487d9a8f29715f78b76,
     type: 3}
+  enemyStayShootAnimator: {fileID: 0}
 --- !u!95 &6162097745531939123
 Animator:
   serializedVersion: 3
@@ -179,7 +180,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fb2626cee79f7d94b8c5e694198f1a05, type: 2}
+      objectReference: {fileID: 2100000, guid: f324f14ecf87f114d80b3637dad76372, type: 2}
     - target: {fileID: -981998649904569321, guid: 4a3fa0eb85ff99041b87b949b3d4d5aa,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
