@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour {
 	public GameObject rapidFirer;
     private Rigidbody rb;
 
+    public GameObject gameOverMenu;
+
     //sounds
     public AudioSource audioSource;
     public AudioClip collideSound;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start() {
         rb = transform.GetComponent<Rigidbody>();
+        filler.fillAmount = hp;
     }
 
     void Update() {
@@ -82,8 +85,8 @@ public class PlayerController : MonoBehaviour {
 				RFCounter += Time.deltaTime;
 			}
 		}
-		if (hp <= 0.1f) {
-			Destroy(gameObject);
+		if (hp <= 0.1f) { // DIE
+            Die();			
 		}
 	}
 
@@ -91,6 +94,7 @@ public class PlayerController : MonoBehaviour {
 		hp -= 0.333f;
 		filler.fillAmount = hp;
 	}
+
 	void GetPowerUp() {
 		int rand = Random.Range(3, 0);
 		switch (rand) {
@@ -111,7 +115,7 @@ public class PlayerController : MonoBehaviour {
 				break;
 			case 3:
                 audioSource.PlayOneShot(rapidFireSound, 2.7f);
-                Debug.Log("RAPID FIRE");
+                Debug.Log("RAPID_FIRE");
 				rapidFire = true;
 				rapidFirer.SetActive(true);
 				RFCounter = 0;
@@ -119,9 +123,14 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    void Die() {        
+        gameOverMenu.SetActive(true);
+        Destroy(gameObject);
+        //Time.timeScale = 0;
+    }
+
 	private void OnCollisionEnter(Collision collision) {
 		if (collision.gameObject.CompareTag("Enemy")) {
-            audioSource.PlayOneShot(takeHitSound);
 			Destroy(collision.gameObject);
 			if (!starPower) {
                 TakeDamage();

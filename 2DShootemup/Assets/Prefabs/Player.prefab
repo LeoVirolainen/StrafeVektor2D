@@ -163,9 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   upSpeed: 12.5
-  accMultip: 0
   hp: 1
-  movingUp: 0
   inGround: 0
   inCeiling: 0
   starPower: 0
@@ -176,10 +174,11 @@ MonoBehaviour:
   RFMaxCounter: 10
   filler: {fileID: 0}
   counter: 0
-  maxCounter: 0.5
+  maxCounter: 0.75
   playerBullet: {fileID: 317735562406508318, guid: 75e0f5ae6d4814d04ab8cb31431cdde1,
     type: 3}
   rapidFirer: {fileID: 5317595560451465235}
+  gameOverMenu: {fileID: 0}
   audioSource: {fileID: 0}
   collideSound: {fileID: 8300000, guid: 674d8683fdef24574996ea0125769897, type: 3}
   HPSound: {fileID: 8300000, guid: 31ab358b7c654456cb5ff253cbc199ee, type: 3}
@@ -485,11 +484,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5317595560754175459}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: af76065241d5f4f869711a24c1bbe12a,
-        type: 3}
-      propertyPath: m_Name
-      value: Spaceship_MkII
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: af76065241d5f4f869711a24c1bbe12a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -559,6 +553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: af76065241d5f4f869711a24c1bbe12a,
+        type: 3}
+      propertyPath: m_Name
+      value: Spaceship_MkII
       objectReference: {fileID: 0}
     - target: {fileID: -5684868951745258883, guid: af76065241d5f4f869711a24c1bbe12a,
         type: 3}
