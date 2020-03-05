@@ -1978,6 +1978,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
+        type: 3}
+      propertyPath: filler
+      value: 
+      objectReference: {fileID: 355560030}
+    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
+        type: 3}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 336200417}
+    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
+        type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 622503756}
     - target: {fileID: 5317595560754175459, guid: c4353210e2bd6e849a9de2b7a68745f5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2033,21 +2048,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
-        type: 3}
-      propertyPath: filler
-      value: 
-      objectReference: {fileID: 355560030}
-    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
-        type: 3}
-      propertyPath: gameOverMenu
-      value: 
-      objectReference: {fileID: 336200417}
-    - target: {fileID: 5317595560754175471, guid: c4353210e2bd6e849a9de2b7a68745f5,
-        type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 622503756}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4353210e2bd6e849a9de2b7a68745f5, type: 3}
 --- !u!1 &5317595561887077465 stripped

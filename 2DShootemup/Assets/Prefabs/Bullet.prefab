@@ -124,6 +124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 30
+  explosionFx: {fileID: 1828836713726938564, guid: 5bde5481be88ae14593fc5f5051300fc,
+    type: 3}
   audioSource: {fileID: 0}
   takeHitSound: {fileID: 8300000, guid: ef6c05cb5a86c42c7aac4c9969c0afa9, type: 3}
   shootSound: {fileID: 8300000, guid: cf33308d8d9d041d9918df58213706c0, type: 3}
