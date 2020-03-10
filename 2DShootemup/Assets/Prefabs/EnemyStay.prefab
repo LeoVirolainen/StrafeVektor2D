@@ -484,7 +484,7 @@ Transform:
   m_GameObject: {fileID: 7861151125920512460}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.014075279, y: 1.6896877, z: -1.1686869}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 2189707342839996354}
   m_Father: {fileID: 0}
@@ -649,11 +649,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyStay
       objectReference: {fileID: 0}
-    - target: {fileID: -5580916350219692131, guid: 6fa8e3d6916bb724eb6310cc59cad016,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 29feedb6aa6c895428c261cd7018c7e0, type: 2}
     - target: {fileID: -4216859302048453862, guid: 6fa8e3d6916bb724eb6310cc59cad016,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -734,6 +729,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dabe1ccf7690fc348af7bf19dfff88c8, type: 2}
+    - target: {fileID: -5580916350219692131, guid: 6fa8e3d6916bb724eb6310cc59cad016,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 29feedb6aa6c895428c261cd7018c7e0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fa8e3d6916bb724eb6310cc59cad016, type: 3}
 --- !u!4 &2189707342839996354 stripped
