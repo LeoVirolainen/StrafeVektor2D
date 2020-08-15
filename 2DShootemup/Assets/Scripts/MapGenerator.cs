@@ -7,7 +7,8 @@ public class MapGenerator : MonoBehaviour {
 	public GameObject mapPiece0;
 	public GameObject mapPiece1;
 	public GameObject mapPiece2;
-	public GameObject powerUp;
+    public GameObject mapPiece3;
+    public GameObject powerUp;
 	public GameObject lastPiece;
 	private GameObject destroyablePiece;
 	public GameObject instantiablePiece;
@@ -16,7 +17,7 @@ public class MapGenerator : MonoBehaviour {
 	public GameObject[] mapPieces;
 
 	void Start() {
-		mapPieces = new GameObject[] { mapPiece0, mapPiece1, mapPiece2 };
+		mapPieces = new GameObject[] { mapPiece0, mapPiece1, mapPiece2, mapPiece3 };
 	}
 
 	void Update() {
@@ -27,7 +28,7 @@ public class MapGenerator : MonoBehaviour {
 	}
 
 	void CreateNextMapPiece() {
-		int rand = Random.Range(3, 0);
+		int rand = Random.Range(4, 0);
 		int randPU = Random.Range(3, 0);
 		for (int i = 1; i <= rand; i++) {
 			if (rand == i) {
@@ -41,6 +42,6 @@ public class MapGenerator : MonoBehaviour {
 		GameObject piece = Instantiate(instantiablePiece, nextPiecePos, Quaternion.identity) as GameObject;
 		destroyablePiece = lastPiece;
 		lastPiece = piece;
-		Destroy(destroyablePiece, 5);
+		Destroy(destroyablePiece, 20);
 	}
 }

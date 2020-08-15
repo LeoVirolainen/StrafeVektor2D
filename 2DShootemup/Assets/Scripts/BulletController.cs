@@ -5,6 +5,8 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 	public float moveSpeed;
 
+    public GameObject explosionFx;
+
     //sound
     public AudioSource audioSource;
     public AudioClip takeHitSound;
@@ -23,6 +25,7 @@ public class BulletController : MonoBehaviour {
 		if (other.gameObject.CompareTag("Enemy")) {
             audioSource.PlayOneShot(takeHitSound, 0.7f);
 			Destroy(other.gameObject);
+            Instantiate(explosionFx, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 	}
